@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+font-family: 'Amiko', sans-serif;	
+}
+.nav-item{
+    font-family: 'Amiko', sans-serif;
+    color:#003A5B;
+    font-size: 18px;
+    text-decoration: none;	 
+}
+.nav-link {
+    color:#003A5B;  
+}
+   
+.nav-link .a{
+font-family: 'Amiko', sans-serif;
+color:#003A5B;
+font-size: 18px;
+text-decoration: none;	
+}
+
+.nav-link .hover{
+    font-family: 'Amiko', sans-serif;
+    color:#003A5B;
+    font-size: 18px;
+    text-decoration: none;	
+}
+a{
+    font-family: 'Amiko', sans-serif;
+    color:#003A5B;
+    font-size: 18px;
+    text-decoration: none;
+}
+.logo-nav {
+margin-left: 25px;
+ 
+	
+}
+.text-logo{
+	font-family: 'Amiko', sans-serif;	
+	float: right;
+	margin: 23px 15px;
+	  color:#003A5B;
+	
+}
+.title{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#305C8F;
+	margin-left: 115px;
+}
+.titleB{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 42px;
+	color:#003A5B;
+	font-weight: bold;
+	margin-left: 115px;
+	
+}
+.titleC{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#6885A6;
+	font-weight: bold;
+	margin-left: 115px;
+	line-height: 1.5;
+}
+.fondo-title{
+	font-family: 'Amiko', sans-serif;	
+	background-color: #B0C9D1;
+	padding: 55px 0 55px;
+	color:#003A5B;
+	
+
+}
+.fondo-titleB{
+  font-family: 'Amiko', sans-serif;	
+	padding: 55px 0 55px;
+	color:#003A5B;
+	
+
+}
+.color-text{
+	color:#003A5B;
+}
+.text-P{
+	font-family: 'Amiko', sans-serif;	
+	padding: 35px 0 35px;
+	
+	
+}
+.PT{
+	margin: 0px 300px 25px;
+	line-height: 1.5;
+	color:#6885A6;
+	
+}
+.PTB{
+	margin: 0px 100px 0px;
+	line-height: 1.5;
+	color:#6885A6;
+	font-family: 'Amiko', sans-serif;	
+}
+.btn1{
+	
+
+	font-size: 24px;
+	font-family: 'Amiko', sans-serif;	
+	color: white;
+	background-color: #6885A6;
+	width:256px;
+	height: 56px;
+	border-radius: 15px;
+	border-color:white;
+	text-decoration: none;
+	border-style: none;
+
+	
+}
+.btn2{
+
+	font-size: 24px;
+	font-family: 'Amiko', sans-serif;	
+	color: #305C8F;
+	background-color: #B0C9D1;
+	width:256px;
+	height: 56px;
+	border-radius: 15px;
+	border-color:white;
+	text-decoration: none;
+	border-style: none;
+
+	
+	
+}

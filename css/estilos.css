@@ -84,6 +84,14 @@ margin-left: 25px;
 	margin-left: 115px;
 	line-height: 1.5;
 }
+.title-Form{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 18px;
+	color:#6885A6;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-left: 115px;
+}
 .fondo-title{
 	font-family: 'Amiko', sans-serif;	
 	background-color: #B0C9D1;

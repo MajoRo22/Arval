@@ -6,34 +6,40 @@ font-family: 'Amiko', sans-serif;
 }
 
 /*nav*/
-.nav-item{
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: revert;
+    /* align-items: center; */
+}
+.navbar-nav  .navbar-light
+.nav-item .nav-link{
     font-family: 'Amiko', sans-serif;
     color:#003A5B;
     font-size: 18px;
     text-decoration: none;	 
 }
-
-.nav-link {
+ .navbar-nav .navbar-light .nav-item .nav-link {
     color:#003A5B;  
 	font-family: 'Amiko', sans-serif;
 	font-size: 18px;
     text-decoration: none;	
 }
-
+ .navbar-nav .navbar-light .nav-item
 .nav-link:focus, .nav-link:hover {
     color: #6885A6;
 	font-family: 'Amiko', sans-serif;
 	font-size: 18px;
     text-decoration: none;	
 }  
-
+ .navbar-nav .navbar-light .nav-item
 .nav-link:visited{
 font-family: 'Amiko', sans-serif;
 color:#003A5B;
 font-size: 18px;
 text-decoration: none;	
 }
-
+ .navbar-nav .navbar-light .nav-item
 .nav-link:active{
 font-family: 'Amiko', sans-serif;
 color:#003A5B;
@@ -128,6 +134,10 @@ margin-left: 25px;
 	color:#6885A6;
 	font-family: 'Amiko', sans-serif;	
 }
+
+
+/*Button*/
+
 .btn1{
 	
 
@@ -160,10 +170,6 @@ margin-left: 25px;
 	
 	
 }
-#S1{
-	
-}
-
 
 /* Formulario------------------ */
 .header-flex{
@@ -224,4 +230,30 @@ margin-left: 25px;
     font-size: 1rem;
     border-radius: 0.25rem;
 
+}
+/*@media*/
+
+@media (max-width: 700px){
+#S1{
+flex-direction: column;	
+}
+	.btn2{
+		margin-left: 115px;
+	}
+	.PT{
+			margin: 0px 20px 20px;
+		
+	}
+}
+@media (max-width: 1000px){
+#S1{
+flex-direction: column;	
+}
+	.btn2{
+		margin-left: 115px;
+	}
+	.PT{
+			margin: 0px 20px 20px;
+		
+	}
 }

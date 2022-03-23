@@ -24,32 +24,32 @@
 </head>		
 <body>
 
-	<style>.nav-link{font-family: 'Amiko', sans-serif;color:#003A5B;font-size: 18px;text-decoration: none;}</style>	
+	
+<style>
+
+.navbar-light .navbar-nav .nav-link
+	{font-family: 'Amiko', sans-serif;color:#003A5B;font-size: 18px;text-decoration: none;}
+	</style>	
 		
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-toggler navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
         <img src="img/logo-arval.svg" width="80px" class="d-inline-block align-text-top logo-nav">
 	  	<h3 class="text-logo">ARVAL</h3>
     </a>
-	<ul class="nav justify-content-end">
-      <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#Protection">PROTECTION</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#Access">ACCESS</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#Work">WORK</a>
-      </li>
-      <li class="nav-item">
-         <a class="nav-link" href="#Contact">CONTACT</a>
-      </li>
-	  <li class="nav-item">
-         <a class="nav-link" href="ES/IndexES.html">ES</a>
-      </li>
-    </ul>
-  </div>
+	   <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+	  <div class="collapse navbar-collapse" style="flex-grow: revert;" id="navbarCollapse">
+                <div class="navbar-nav float-right">
+                    <a href="#Protection" class="nav-item nav-link">PROTECTION</a>
+                    <a href="#Access" class="nav-item nav-link">ACCESS</a>
+                    <a href="#Work" class="nav-item nav-link">WORK</a>
+                    <a href="#Contact" class="nav-item nav-link">CONTACT</a>
+					  <a href="ES/IndexES.html" class="nav-item nav-link">ES</a>
+                </div>
+	
+	  </div></div>
 </nav>
 <div class="row">
   <div class= "col-md-7 fondo-titleB text-left">
@@ -58,9 +58,9 @@
 	<p class="titleB">Simple, comprehensive API security</p>
 	<p class="titleC">Flexible API security solution, preventing <br/> unauthorized access to your application and shielding them from exploitation</p>
 		
-   <div class="row">
+   <div class="row" id="S1">
 		<div class="col-md-6">
-			<a href="Formulario.html" target="_blank"><button type="button" class="btn1 mt-4" style="margin-left: 115px;">Schedule a DEMO</button>	</a>
+			<a href="Formulario.html" target="_parent"><button type="button" class="btn1 mt-4" style="margin-left: 115px;">Schedule a DEMO</button>	</a>
 			
 		</div>
 		<div class="col-md-6">

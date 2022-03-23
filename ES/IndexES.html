@@ -26,44 +26,34 @@
 	
 	
 	<body>
+<style>
 
-	<style>.nav-link{
-		   font-family: 'Amiko', sans-serif;
-    color:#003A5B;
-    font-size: 18px;
-    text-decoration: none
-		}
-		</style>	
+.navbar-light .navbar-nav .nav-link
+	{font-family: 'Amiko', sans-serif;color:#003A5B;font-size: 18px;text-decoration: none;}
+	</style>	
 		
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-toggler navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="../img/logo-arval.svg" width="80px" class="d-inline-block align-text-top logo-nav">
-
+        <img src="../img/logo-arval.svg" width="80px" class="d-inline-block align-text-top logo-nav">
 	  	<h3 class="text-logo">ARVAL</h3>
-    
     </a>
+	   <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+	  <div class="collapse navbar-collapse" style="flex-grow: revert;" id="navbarCollapse">
+                <div class="navbar-nav float-right">
+                    <a href="#Protection" class="nav-item nav-link">PROTECCIÓN</a>
+                    <a href="#Access" class="nav-item nav-link">ACCESO</a>
+                    <a href="#Work" class="nav-item nav-link">NUESTRO TRABAJO</a>
+                    <a href="#Contact" class="nav-item nav-link">CONTACTO</a>
+					  <a href="../Index.html" class="nav-item nav-link">EN</a>
+                </div>
 	
-	
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="#Protection">PROTECCIÓN</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#Access">ACCESO</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#Work">NUESTRO TRABAJO</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link" href="#Contact">CONTACTO</a>
-  </li>
-	  <li class="nav-item">
-    <a class="nav-link" href="../Index.html">EN</a>
-  </li>
-</ul>
-  </div>
+	  </div></div>
 </nav>
+		
+		
 		
 		<div class="row">
 			<div class= "col-md-7 fondo-titleB text-left">
@@ -73,9 +63,9 @@
              Seguridad API simple y completa</p>
 			   <p class="titleC">Solución de seguridad flexible,<br/> que evita el acceso no autorizado a su aplicación y la protege de la explotación</p>
 		
-			<div class="row">
+			<div class="row"id="S1">
 				<div class="col-md-6">
-					<a href="FormularioES.html" target="_blank"><button type="button" class="btn1 mt-4" style="margin-left: 115px;">Agenda una DEMO</button>	</a>
+					<a href="FormularioES.html" target="_parent"><button type="button" class="btn1 mt-4" style="margin-left: 115px;">Agenda una DEMO</button>	</a>
 				</div>
 				<div class="col-md-6">
 				<button type="button" class="btn2 mt-4"> Ver ARVAL trabajar</button>

@@ -156,31 +156,40 @@
 </section>
 <section class="page-section" id="Contact">
 <div class="row text-center contact-form  mt-5 fondo-title">
-			<h2 class="color-text"><strong>Contactanos</strong></h2>
-	<div class= "col-md-12 text-center contact-form fondo-title">
+	<h2 class="color-text"><strong>Contactanos</strong></h2></div>
+	   <div class= "row text-left">
+	<div class= "col-md-12 text-left contact-form fondo-title">
 	
-	<form action="" class="contact-style mb-5">
+	<form id="ContactForm" action="contactoArval.php" class="contact-style mb-5" method="post" class="needs-validation">
 		
 		<div>
-			<label for="exampleFormControlInput1" class="form-text-style">Email</label>
-			<input type="email" class="input-style" id="exampleFormControlInput1" placeholder="name@example.com">
+			<label for="exampleFormControlInput1" class="form-text-style">Correo</label>
+			<input type="email" class="input-style" name="Email" placeholder="name@example.com" id="Email" minlength="1" required />
+			  <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Completa este campo.</div>
 		</div>
 		<div class="header-flex">
 			<div class="form-input-style">
-				<label for="exampleFormControlTextarea1" class="form-text-style">Nombe</label>
-				<input type="text" class="input-style2" id="exampleFormControlInput1" placeholder="Nombre">
+				<label for="exampleFormControlTextarea1" class="form-text-style">Nombre</label>
+				<input type="text" class="input-style2" name="Name" placeholder="Nombre" id="Name" minlength="1" required />
+				  <div class="valid-feedback">Valido.</div>
+              <div class="invalid-feedback">Completa este campo.</div>
 			</div>
 			<div>
 				<label for="exampleFormControlTextarea1" class="form-text-style">Celular</label>
-				<input type="phone-number" class="input-style2" id="exampleFormControlInput1" placeholder="123456">
+				<input type="phone-number" class="input-style2" placeholder="123456" name="Phone" id="Phone" />
+				  <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Completa este campo.</div>
 				
 			</div>
 		</div>
 		<div>
 			<label for="exampleFormControlTextarea1" class="form-text-style">Mensaje</label>
-			<textarea type="text" class="input-style" id="exampleFormControlInput1" placeholder="Mensaje"></textarea>
+			<textarea type="text" rows="5" cols="45" class="color-text input-style" id="MensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
+			  <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Completa este campo.</div>
 		</div>
-		<button type="button" class="send-button-style">Enviar</button>
+		<button type="submit" class="send-button-style">Enviar</button>
 		</form>
 		
 	</div>

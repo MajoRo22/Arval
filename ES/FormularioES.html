@@ -25,17 +25,17 @@
 </head>
 	
 	
-	<body>
+	<body style="overflow-x: hidden;">
 
 	<style>.nav-link{
 		   font-family: 'Amiko', sans-serif;
     color:#003A5B;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none
 		}
-		</style>	
+		</style>
 		
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-toggler navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="../img/logo-arval.svg" width="80px" class="d-inline-block align-text-top logo-nav">
@@ -43,21 +43,24 @@
 	  	<h3 class="text-logo">ARVAL</h3>
     
     </a>
-	
-	
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link" href="IndexES.html">INICIO</a>
-  </li>
-	  <li class="nav-item">
-    <a class="nav-link" href="../Formulario.html">EN</a>
-  </li>
-</ul>
+	 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+	   <div class="collapse navbar-collapse" style="flex-grow: revert;" id="navbarCollapse">
+                <div class="navbar-nav float-right">
+                    <a href="IndexES.html" class="nav-item nav-link">INICIO</a>
+                    <a href="../Formulario.html" class="nav-item nav-link">EN</a>
+                
+                </div>
+
   </div>
+	</div>
 </nav>
 
 <header>
     <div class="header-flex">
+		<div class="row" id="">
+		<div class="col-md-7">
         <div class="form-style">
             <form action="">
                 <div>
@@ -81,7 +84,8 @@
                 </div>
                 <button type="button" class="button-style">Enviar</button>
             </form>
-        </div>
+			</div></div>
+		<div class="col-md-5"  id="Form-text">
         <div class= "fondo-titleB text-left mt-5">
             <p class="title">
                 Agendá una DEMO
@@ -96,8 +100,12 @@
             con uno de nuestros expertos y resuelva todas<br/>
             sus dudas.
             </p>
-        </div>
-    </div>
+			</div>
+			
+			
+			
+			
+			</div></div></div>
 </header>
 
     <footer class="fondo-title">

@@ -22,13 +22,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
 	
 </head>		
-<body>
+<body style="overflow-x: hidden;">
 
 	
 <style>
 
 .navbar-light .navbar-nav .nav-link
-	{font-family: 'Amiko', sans-serif;color:#003A5B;font-size: 18px;text-decoration: none;}
+	{font-family: 'Amiko', sans-serif;color:#003A5B;font-size: 16px;text-decoration: none;}
 	</style>	
 		
 <nav class="navbar navbar-toggler navbar-expand-lg navbar-light">
@@ -42,11 +42,11 @@
             </button>
 	  <div class="collapse navbar-collapse" style="flex-grow: revert;" id="navbarCollapse">
                 <div class="navbar-nav float-right">
-                    <a href="#Protection" class="nav-item nav-link">PROTECTION</a>
-                    <a href="#Access" class="nav-item nav-link">ACCESS</a>
-                    <a href="#Work" class="nav-item nav-link">WORK</a>
-                    <a href="#Contact" class="nav-item nav-link">CONTACT</a>
-					  <a href="ES/IndexES.html" class="nav-item nav-link">ES</a>
+                    <a href="#Protection" class="nav-item nav-link"><strong>PROTECTION</strong></a>
+                    <a href="#Access" class="nav-item nav-link"><strong>ACCESS</strong></a>
+                    <a href="#Work" class="nav-item nav-link"><strong>WORK</strong></a>
+                    <a href="#Contact" class="nav-item nav-link"><strong>CONTACT</strong></a>
+					  <a href="ES/IndexES.html" class="nav-item nav-link"><strong>ES</strong></a>
                 </div>
 	
 	  </div></div>
@@ -122,11 +122,12 @@
 				<button type="button" class="btn1 mt-5">START FREE</button>	
 				</div>
 </div>
-</section>
-<section class="page-section contact-form fondo-title" id="Contact">
-	<form action="" class="contact-style">
+	<div class="row text-center contact-form  mt-5 fondo-title">
 		<h2 class="color-text"><strong>Contact us!</strong></h2>
-		<br>
+	<div class= "col-md-12 text-center contact-form fondo-title">
+	<form action="" class="contact-style mb-5">
+		
+
 		<div>
 			<label for="exampleFormControlInput1" class="form-text-style">Email</label>
 			<input type="email" class="input-style" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -147,8 +148,10 @@
 			<textarea type="text" class="input-style" id="exampleFormControlInput1" placeholder="Message"></textarea>
 		</div>
 		<button type="button" class="send-button-style">Send</button>
-	</form>
+		</form>
+		</div></div>
 </section>
+
 
 <footer class="footer-title"></footer>
 		

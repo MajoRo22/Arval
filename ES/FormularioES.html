@@ -62,15 +62,19 @@
 		<div class="row" id="">
 		<div class="col-md-7">
         <div class="form-style">
-            <form action="">
+            <form id="ContactForm" action="DemoES.php" class=" mb-5" method="post" class="needs-validation">
                 <div>
                     <label for="exampleFormControlInput1" class="form-text-style">Email de Trabajo</label>
-                    <input type="email" class="input-style" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                    <input type="email" class="input-style" name="Email" placeholder="name@example.com" id="Email" minlength="1" required />
+			  <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Completa este campo.</div>
                 </div>
                 <div class="header-flex">
                     <div class="form-input-style">
                         <label for="exampleFormControlTextarea1" class="form-text-style">Nombre</label>
-                        <input type="text" class="input-style2" id="exampleFormControlInput1" placeholder="Nombre">
+                      	<input type="text" class="input-style2" name="Name" placeholder="Nombre" id="Name" minlength="1" required />
+				  <div class="valid-feedback">Valido.</div>
+              <div class="invalid-feedback">Completa este campo.</div>
                     </div>
                     <div>
                         <label for="exampleFormControlTextarea1" class="form-text-style">Celular</label>
@@ -80,11 +84,18 @@
                 </div>
                 <div>
                     <label for="exampleFormControlTextarea1" class="form-text-style">Cuando le gustaria implementar la solucion?</label>
-                    <input type="text" class="input-style" id="exampleFormControlInput1" placeholder="Dentro de 1 mes">
-                </div>
-                <button type="button" class="button-style">Enviar</button>
+                    <textarea type="text" rows="2" cols="45" class="color-text input-style" id="MensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
+			  <div class="valid-feedback">Valido.</div>
+                <div class="invalid-feedback">Completa este campo.</div>
+				</div>	
+                <button type="submit" class="button-style">Enviar</button>
             </form>
-			</div></div>
+			
+				</div>
+			
+			
+			
+</div>
 		<div class="col-md-5"  id="Form-text">
         <div class= "fondo-titleB text-left mt-5">
             <p class="title">
@@ -105,7 +116,10 @@
 			
 			
 			
-			</div></div></div>
+			</div>
+			
+			
+			</div></div>
 </header>
 
     <footer class="fondo-title">

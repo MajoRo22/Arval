@@ -10,10 +10,12 @@ font-family: 'Amiko', sans-serif;
 	display: flex;
 	flex-direction: row;
 	margin-top: 0px;
+	justify-content: space-around;
 }
 
 .header-img{
 	size: 40%;
+	
 }
 
 /* animacion */

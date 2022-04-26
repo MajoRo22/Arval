@@ -13,6 +13,11 @@ font-family: 'Amiko', sans-serif;
 	justify-content: space-around;
 }
 
+.qr-img{
+	padding-left: 80px;
+	width: 80%;
+}
+
 .header-img{
 	size: 40%;
 	

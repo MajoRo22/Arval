@@ -48,7 +48,7 @@
             
             $mensaje .= "Sent in : " . date('F j,Y', time());
 
-            $para = 'descalsmaria@hotmail.com';
+            $para = 'info@pentass.com';
             $asunto = 'Solicito mi demo de Arval';
 
             

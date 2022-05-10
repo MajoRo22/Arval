@@ -125,6 +125,14 @@ margin-left: 25px;
 	margin-left: 115px;
 	line-height: 1.5;
 }
+.titleF{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#6885A6;
+	font-weight: bold;
+	margin-left: 1px;
+	line-height: 1.5;
+}
 .title-Form{
 	font-family: 'Amiko', sans-serif;	
 	font-size: 18px;
@@ -244,6 +252,44 @@ margin-left: 25px;
 	margin-left: 360px;
     font-size: 1rem;
     border-radius: 0.25rem;
+}
+/*ICONS*/
+
+.icon {
+    color: #0067AC;
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.icon-xs {
+    color: #009bdb;
+    font-size: 20px;
+    vertical-align: bottom;
+
+}
+
+.icon-m {
+    color: #0067AC;
+    font-size: 45px;
+    vertical-align: bottom; 
+
+}
+
+.icon-md {
+    color: #0067AC;
+    font-size: 65px;
+    vertical-align: bottom;
+
+}
+
+.icon-lg {
+    color: #0067AC;
+    font-size: 85px;
+}
+
+.icon-xl {
+    color: #0067AC;
+    font-size: 200px;
 }
 
 /* Formulario------------------ */

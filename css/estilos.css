@@ -426,8 +426,10 @@ flex-direction: column;
 #Form{
     flex-direction: column;	
 	}
+
 .form-style{
 		margin: 60px 30px 20px 30px;
+		padding: 30px;
 	}
 .contact-style{
 		background-color: #6885A6;
@@ -448,7 +450,7 @@ margin-left: 60px;
 		margin-right: 45px;
 	}
 	.button-style{
-		margin-left: 200px;
+		margin-left: 80px;
 	}
 .header-flex{
 		display: flex;
@@ -546,6 +548,16 @@ margin-left:55px;
 	
 
 }
+.input-style{
+
+    width: 250px;
+    
+}
+.input-style2{
+	display: flex;
+    width: 250px;
+  
+}
 }
 
 @media (max-width: 1250px){
@@ -589,16 +601,8 @@ margin-right: 15px;
 .navbar-brand{
 		margin-right: 45px;
 }
-.input-style{
 
-    width: 300px;
-    
-}
-.input-style2{
-	display: flex;
-    width: 300px;
-  
-}
+
 .header-flex{
 
 	flex-direction: column;

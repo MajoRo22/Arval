@@ -318,9 +318,7 @@ margin-left: 25px;
     color: #0067AC;
     font-size: 200px;
 }
-.ml-65{
-	margin-left: 65px;
-}
+
 /* Formulario------------------ */
 .header-flex{
 	display: flex;
@@ -399,6 +397,8 @@ margin-left: 25px;
 @media (max-width: 480px){
 .dir-footer{
 		flex-direction: column;
+	  justify-content: center;
+	  align-content: center;
 	
 	}
 .l-text{
@@ -406,7 +406,16 @@ margin-left: 25px;
 		}
 
 .ml-li{
+	margin-left: 65px;
+}
+.ml-65{
 	margin-left: 40px;
+}
+.text-alin{
+text-align: center;
+}
+.img-left{
+	margin-left: 0px;
 }
 }
 @media (max-width: 700px){
@@ -418,7 +427,7 @@ margin-left: 25px;
 flex-direction: column;	
 }
 .ml-65{
-	margin-left: 26px;
+	margin-left: 40px;
 }
 .btn2{
 		margin-left: 115px;
@@ -518,7 +527,7 @@ margin-left:55px;
    align-content: center;
 }
 .img-left{
-	margin-left: 80px;
+	margin-left: 0px;
 }
 .P-redes{
 	padding: 0px;
@@ -573,8 +582,41 @@ margin-left:55px;
     width: 230px;
   
 }
+.text-alin{
+	text-align: center;
+	}
 }
+@media (min-width:700px) and (max-width: 850px){
+	.dir-footer{
+		flex-direction: column;
+	  justify-content: center;
+	  align-content: center;
+	
+	}
+.l-text{
+		margin-left:30px;
+		}
 
+.ml-li{
+	margin-left: 65px;	
+}
+.header-img{
+	width: 70%;
+	height: auto;
+}
+.fondo-img{
+	font-family: 'Amiko', sans-serif;	
+	background-color: #B0C9D1;
+	padding: 55px 0 55px;
+	color:#003A5B;
+	margin-left: 0px;
+	
+
+}
+.text-alin{
+	text-align: center;
+	}
+}
 @media (max-width: 1250px){
 #S1{
 flex-direction: column;	
@@ -637,7 +679,7 @@ margin-right: 15px;
 	padding-top: 5px;
 }
 .ml-65{
-	margin-left: 0px;
+	margin-left: 65px;
 }
 .ml-li{
 	margin-left: 55px;

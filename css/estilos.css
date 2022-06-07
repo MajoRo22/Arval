@@ -169,7 +169,7 @@ margin-left: 25px;
 }
 .footer-title{
 	background-color: #003A5B;
-	padding: 55px 0 55px;
+	padding: 15px 0 55px;
 	color:#FFFFFF;
 }
 .fondo-titleB{
@@ -550,6 +550,12 @@ float: center;
     border-radius: 0.25rem;
 
 }
+.img-left{
+	margin-left: 0px;
+}
+.ml-30{
+	margin-left: 15px;
+}
 }
 
 @media (min-width: 490px) and (max-width: 760px){
@@ -684,6 +690,7 @@ margin-left:55px;
 }
 .P-redes{
 	padding: 0px;
+	margin:0px;
 }
 .ml-li{
 	margin-left: 65px;
@@ -993,6 +1000,10 @@ float:right;
     border-radius: 0.25rem;
     margin-bottom: 20px;
  }
+ .margin-text{
+	margin-left: 40px; margin-top: 10px;
+	font-size: 38px;
+}
 }
 
 @media (min-width: 1250px) and (max-width: 2550px){
@@ -1025,5 +1036,9 @@ float:right;
 .header-img2{
 	width: 100%;
 	height: auto;
+}
+.margin-text{
+	margin-left: 40px; margin-top: 10px;
+	font-size: 38px;
 }
 }

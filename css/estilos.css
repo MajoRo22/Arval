@@ -18,10 +18,7 @@ font-family: 'Amiko', sans-serif;
 	width: 80%;
 }
 
-.header-img{
-	width: 100%;
-	
-}
+
 
 /* animacion */
 .animation-style{
@@ -166,6 +163,7 @@ margin-left: 25px;
 	padding: 55px 0 55px;
 	color:#003A5B;
 	margin-left: 100px;
+
 	
 
 }
@@ -418,12 +416,120 @@ float: center;
 .img-left{
 	margin-left: 0px;
 }
+.fondo-img{
+	float: right;
+	margin-left: 0px;
 }
-@media (max-width: 700px){
 .header-img{
-		width: 100%;
-		height: auto;
+	width: 70%;
+	height: auto;
+}
+.header-img2{
+	width: 70%;
+	height: auto;
+}
+.direct{
+	display: flex;
+	flex-direction: column;
+	margin-left: 25px;
+}
+.title{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#305C8F;
+	margin-left: 35px;
+}
+.titleB{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 42px;
+	color:#003A5B;
+	font-weight: bold;
+	margin-left: 35px;
+	
+}
+.titleC{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#6885A6;
+	font-weight: bold;
+	margin-left: 35px;
+	line-height: 1.5;
+}
+.PTB{
+	margin: 0px 20px 0px;
+	line-height: 1.5;
+	color:#6885A6;
+	font-family: 'Amiko', sans-serif;	
+}
+.PT{
+	margin: 0px 40px 0px 45px;
+	line-height: 1.5;
+	color:#6885A6;
+	
+}
+.margin-text{
+	margin-left: 10px; margin-top: 20px;
+	font-size: 38px;
 	}
+.contact-style{
+		background-color: #6885A6;
+		width:350px;
+		padding: 50px;
+		border-radius: 20px;
+		text-align: left;
+	
+}
+.contact-form{
+	display: flex;
+    justify-content: center;
+	align-self: center;
+	align-content: center;
+}
+.input-style{
+
+    width: 230px;
+    
+}
+.input-style2{
+	display: flex;
+    width: 230px;
+  
+}#Form{
+    flex-direction: column;	
+	}
+
+.form-style{
+		margin: 60px 30px 20px 30px;
+		padding: 30px;
+	}
+#Form-text.title{
+		margin-left: 60px;
+		}
+#Form-text.titleB{
+		margin-left: 60px;	
+		}
+.header-flex{
+			display: flex;
+			flex-direction: column;
+}
+.send-button-style{
+	font-weight: 400;
+    line-height: 1.5;
+    color: #FFFFFF;
+	background-color: #003A5B;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+	margin-left: 210px;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+}
+}
+
+@media (min-width: 490px) and (max-width: 760px){
+
 #S1{
 flex-direction: column;	
 }
@@ -434,11 +540,11 @@ flex-direction: column;
 		margin-left: 115px;
 	}
 .PT{
-			margin: 0px 20px 20px;
+	margin: 0px 60px 0px 60px;
 		
 	}
 .PTB{
-		margin: 0px 20px 0px;
+		margin: 0px 60px 0px 60px;
 		line-height: 1.5;
 		color:#6885A6;
 		font-family: 'Amiko', sans-serif;	
@@ -489,12 +595,26 @@ margin-left: 60px;
 	flex-direction: column;
 	margin-left: 10px;
 }
+.title{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 22px;
+	color:#305C8F;
+	margin-left: 35px;
+}
+.titleB{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 28px;
+	color:#003A5B;
+	font-weight: bold;
+	margin-left: 35px;
+	
+}
 .titleC{
 	font-family: 'Amiko', sans-serif;	
-	font-size: 20px;
+	font-size: 18px;
 	color:#6885A6;
 	font-weight: bold;
-	margin-left: 20px;
+	margin-left: 35px;
 	line-height: 1.5;
 }
 .titleF{
@@ -558,20 +678,26 @@ margin-left:55px;
     border-radius: 0.25rem;
 }
 .margin-text{
-	margin-left: 20px; margin-top: 80px;
-}
+	margin-left: 40px; margin-top: 80px;
+	font-size: 38px;
+	}
+
 .ml-10{
 
 	font-size: 17px;
 }
-.fondo-img{
-	font-family: 'Amiko', sans-serif;	
-	background-color: #B0C9D1;
-	padding: 55px 0 55px;
-	color:#003A5B;
-	margin-left: 0px;
-	
 
+.fondo-img{
+	float: center;
+	margin-left: 0px;
+}
+.header-img{
+	width: 70%;
+	height: auto;
+}
+.header-img2{
+	width: 100%;
+	height: auto;
 }
 .input-style{
 
@@ -588,9 +714,9 @@ margin-left:55px;
 	float: center;
 	}
 }
-@media (min-width:700px) and (max-width: 850px){
+@media (min-width:760px) and (max-width: 1100px){
 	.dir-footer{
-		flex-direction: column;
+	flex-direction: column;
 	  justify-content: center;
 	  align-content: center;
 	
@@ -603,17 +729,52 @@ margin-left:55px;
 	margin-left: 65px;	
 }
 .header-img{
-	width: 70%;
+	width: 100%;
 	height: auto;
+}
+.header-img2{
+	width: 100%;
+	height: auto;
+}
+.align{
+	align-self: center;
 }
 .fondo-img{
 	font-family: 'Amiko', sans-serif;	
 	background-color: #B0C9D1;
 	padding: 55px 0 55px;
 	color:#003A5B;
+	float:center;
 	margin-left: 0px;
 	
 
+}
+.title{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#305C8F;
+	margin-left: 5px;
+}
+.titleB{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 28px;
+	color:#003A5B;
+	font-weight: bold;
+	margin-left: 5px;
+	
+}
+.titleC{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#6885A6;
+	font-weight: bold;
+	margin-left: 5px;
+	line-height: 1.5;
+}
+.direct{
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
 }
 .text-alin{
 	text-align: center;
@@ -631,11 +792,26 @@ margin-left:55px;
 	.img-left{
 		margin-left: 0px;
 	}
+.PT{
+		margin: 0px 60px 0px 60px;
+			
+	}
+.PTB{
+		margin: 0px 30px 0px 30px;
+		line-height: 1.5;
+		color:#6885A6;
+		font-family: 'Amiko', sans-serif;	
 }
-@media (max-width: 1250px){
-#S1{
-flex-direction: column;	
+.margin-text{
+			margin-left: 40px; margin-top: 10px;
+			font-size: 38px;
+	}
 }
+@media (min-width: 1100px) and (max-width: 1250px){
+
+	#S1{
+       flex-direction:row;	
+     }
 	.btn2{
 		margin-left: 115px;
 	}
@@ -657,6 +833,19 @@ margin-left: 10px;
 .titleB{
 margin-left: 10px;	
 margin-right: 15px;
+}
+.titleC{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#6885A6;
+	font-weight: bold;
+	margin-left: 5px;
+	line-height: 1.5;
+}
+.direct{
+	display: flex;
+	flex-direction: row;
+	margin-left: 5px;
 }
 .fondo-title{
 	font-family: 'Amiko', sans-serif;	
@@ -709,9 +898,35 @@ margin-right: 15px;
 	text-align: center;
 	float:right;
 	}
+.fondo-img{
+	
+	
+float:right;
+		
+	
+}
+.header-img{
+	width: 70%;
+	height: auto;
+}
+.header-img2{
+	width: 100%;
+	height: auto;
+}
+.input-style2{
+	display: flex;
+    width: 420px;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+ }
 }
 
-@media (max-width: 2550px){
+@media (min-width: 1250px) and (max-width: 2550px){
 	.titleF{
 		font-family: 'Amiko', sans-serif;	
 		font-size: 18px;
@@ -729,4 +944,17 @@ margin-right: 15px;
 		text-align: center;
 		float:right;
 		}
+.fondo-img{
+
+float:right;
+			
+}
+.header-img{
+	width: 70%;
+	height: auto;
+}
+.header-img2{
+	width: 100%;
+	height: auto;
+}
 }

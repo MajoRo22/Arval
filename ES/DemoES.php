@@ -2,8 +2,10 @@
      header("Content-Type: text/html; charset=ISO-8859-1\r\n");
     //header("Content-type: text/html;charset=\"utf-8\"");
     $error = ""; $mensajeExito = "";
+    echo("Hola");
 
     if ($_POST) {
+        echo($_POST);
         if ($_POST['Email'] && filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) === false) {
             $error .= "E-mail no válido.<br>";   
         }
@@ -38,18 +40,18 @@
             <img src = «» />
            
             <div style='margin-left:20px;'>
-                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> You received an email from: " . $name ." . \r\n;</p>
-                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> The e-mail is: " . $mail . ", \r\n  </p>
-                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> and the contact telephone number is: " . $phone . ". \r\n \r\n </p>
-                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> Message: " . $mensajeC . " \r\n </p>
+                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> Recibiste un email de: " . $name ." . \r\n;</p>
+                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> El email es: " . $mail . ", \r\n  </p>
+                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> El numero de telefono es: " . $phone . ". \r\n \r\n </p>
+                <p style='font-size: 15px; color: #00005b;padding-left:50px;'> Mensaje: " . $mensajeC . " \r\n </p>
                  </body>
             </html>";
 
             
-            $mensaje .= "Sent in : " . date('F j,Y', time());
+            $mensaje .= "Enviado en: " . date('F j,Y', time());
 
             $para = 'info@pentass.com';
-            $asunto = 'Solicito mi demo de Arval';
+            $asunto ='Este mensaje fue enviado por Arval.';
 
             
         if (mail($para, $asunto, utf8_decode($mensaje), $header)) {
@@ -70,7 +72,7 @@
 <?php 
      echo "<script>
             
-				 window.location='indexES.html';
+				 window.location='index.html';
 				               
     </script>";
 ?>

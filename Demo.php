@@ -2,8 +2,10 @@
      header("Content-Type: text/html; charset=ISO-8859-1\r\n");
     //header("Content-type: text/html;charset=\"utf-8\"");
     $error = ""; $mensajeExito = "";
+    echo("Hola");
 
     if ($_POST) {
+        echo($_POST);
         if ($_POST['Email'] && filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL) === false) {
             $error .= "E-mail no válido.<br>";   
         }
@@ -49,7 +51,7 @@
             $mensaje .= "Sent in : " . date('F j,Y', time());
 
             $para = 'info@pentass.com';
-            $asunto = 'I request my Arval demo';
+            $asunto ='This message was sent by Arval.';
 
             
         if (mail($para, $asunto, utf8_decode($mensaje), $header)) {

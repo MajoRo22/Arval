@@ -33,7 +33,7 @@
     font-size: 16px;
     text-decoration: none
 		}
-	</style>
+		</style>
 		
 <nav class="navbar navbar-toggler navbar-expand-lg navbar-light">
   <div class="container-fluid">
@@ -50,6 +50,7 @@
                 <div class="navbar-nav float-right">
                     <a href="indexes.html" class="nav-item nav-link" style="color:#003A5B;"><strong>INICIO</strong></a>
                     <a href="../formulario.html" class="nav-item nav-link" style="color:#003A5B;"><strong>EN</strong></a>
+                
                 </div>
 
   </div>
@@ -86,17 +87,12 @@
                     <textarea type="text" rows="2" cols="45" class="color-text input-style" id="MensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
 			        <div class="valid-feedback">Valido.</div>
                     <div class="invalid-feedback">Completa este campo.</div>
-                <!-- clave de prueba -->
-                <!-- v2 recaptcha -->
-                    <div class="g-recaptcha send-button-style" data-sitekey="6LcdJfMgAAAAAINuI6gXcS7JnvUwfPK5IfjTOd-b"></div>
-                    <br />
-                    <div id="status"></div>
-                    <div class="form-group">
-                        <button type="submit" class="btn-celeste float-end btn-form">Enviar</button>
-                    </div>
 				</div>	
                 
-                
+                <button class="g-recaptcha send-button-style" 
+                data-sitekey="6LcdJfMgAAAAAINuI6gXcS7JnvUwfPK5IfjTOd-b" 
+                data-callback='onSubmit' 
+                data-action='submit'>Enviar</button>
             </form>
 			
 				</div>

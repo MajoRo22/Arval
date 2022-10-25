@@ -392,6 +392,38 @@ margin-left: 25px;
 	margin-left: 100px; margin-top: 80px;
 }
 
+/* estilos nuevos - threats ------------------*/
+
+.fondo-card{
+	background-color: #6885A6;
+    width: 180px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+	font-size: 15px;
+    font-weight: 500;
+}
+
+.fondo-card-grande{
+	background-color: #6885A6;
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+	font-size: 15px;
+    font-weight: 500;
+}
+
+.card-style{
+	display: flex; 
+	flex-direction: row; 
+	align-items: center;
+}
+
 /*@media------------------------------------------------------*/
 @media (max-width: 480px){
 	.form-input-style{
@@ -573,9 +605,11 @@ float: center;
     border-radius: 0.25rem;
     margin-bottom: 20px;
 }
+
 }
 
 @media (min-width: 490px) and (max-width: 760px){
+
 #S1{
 flex-direction: column;	
 }
@@ -799,6 +833,7 @@ margin-left:55px;
 	}
 }
 @media (min-width: 600px) and (max-width: 690px){
+
 	.form-style{
 		margin: 60px 61px;
 		padding: 30px;
@@ -840,6 +875,11 @@ margin-left:55px;
 	}
 }
 @media (min-width:760px) and (max-width: 1100px){
+	.card-style{
+		display: flex; 
+		flex-direction: column; 
+		align-items: center;
+	}
 .form-style{
 		margin: 110px 15px;
 		padding: 30px;
@@ -1055,7 +1095,7 @@ float:right;
 
 
  .margin-text{
-	margin-left: 40px; margin-top: 10px;
+	margin-left: 100px; margin-top: 10px;
 	font-size: 38px;
 }
 }
@@ -1093,7 +1133,10 @@ float:right;
 	height: auto;
 }
 .margin-text{
-	margin-left: 40px; margin-top: 10px;
+	margin-left: 100px; margin-top: 10px;
 	font-size: 38px;
 }
+
+
 }
+

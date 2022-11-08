@@ -24,7 +24,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <link rel="shortcut icon" href="../img/favicon.ico">
-
+	
+	
+		<!-- reCAPTCHAv3-->
+		<!--
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!-- cambiar clave de sitio web -->
+		<script src="https://www.google.com/recaptcha/api.js?render=6LegspciAAAAACbZYtp1fln9QPm5Sst5dZk-mFOB"></script>
+		<!-- reCAPTCHAv3-->	
 </head>
 	
 	
@@ -235,7 +243,7 @@
 	<div style="display: flex; justify-content: center;">
 		<div class= "col-md-12 text-center" style="color: #003A5B; font-size: 24px; font-weight: 500; margin-top: 60px; width: 600px; text-align: center;">
 			<p>"Para 2022, el abuso de API será el vector de ataque más frecuente, lo que resultará en fugas de datos de aplicaciones web empresariales".</p>
-			<p style="color: #003A5B; font-size: 10px; ">Fuente: https://approov.io/product/</p>
+			<p style="color: #003A5B; font-size: 11px; ">Fuente Gartner: "Cómo crear una estrategia de seguridad de API eficaz"</p>
 		</div>
 	</div>
 </section>
@@ -372,25 +380,30 @@
 	<p class="title-contact mb-5"><strong>Contactanos</strong></p>
 	   <div class= "row mx-0 px-0 text-left">
 	<div class= "col-md-12 text-left contact-form">
+	 <div class="form-style">
+	<!-- recaptchav3 -->
+	<div id="divContactFormSuccess"></div>
+	<div id="divContactFormFail"></div>
+	<!-- recaptchav3 -->
 	
-	<form id="ContactForm" action="contactoarval.php" class="contact-style mb-5" method="post" class="needs-validation">
-		
+	<!--<form id="ContactForm" action="contactoarval.php" class="contact-style mb-5" method="post" class="needs-validation">-->
+	<form id="ContactForm" action="return false;" class="contact-style mb-5" method="post" class="needs-validation" onsubmit="return false;">
 		<div>
 			<label for="exampleFormControlInput1" class="form-text-style">Correo</label>
-			<input type="email" class="input-style" name="Email" placeholder="name@example.com" id="Email" minlength="1" required />
+			<input type="email" class="input-style" name="Email" placeholder="name@example.com" id="contactEmail" minlength="1" required />
 			  <div class="valid-feedback">Valido.</div>
                 <div class="invalid-feedback">Completa este campo.</div>
 		</div>
 		<div class="header-flex">
 			<div class="form-input-style">
 				<label for="exampleFormControlTextarea1" class="form-text-style">Nombre</label>
-				<input type="text" class="input-style2" name="Name" placeholder="Nombre" id="Name" minlength="1" required />
+				<input type="text" class="input-style2" name="Name" placeholder="Nombre" id="contactName" minlength="1" required />
 				  <div class="valid-feedback">Valido.</div>
               <div class="invalid-feedback">Completa este campo.</div>
 			</div>
 			<div>
 				<label for="exampleFormControlTextarea1" class="form-text-style">Celular</label>
-				<input type="phone-number" class="input-style2" placeholder="123456" name="Phone" id="Phone" />
+				<input type="phone-number" class="input-style2" placeholder="123456" name="PhoneContact" id="contactPhone" />
 				  <div class="valid-feedback">Valido.</div>
                 <div class="invalid-feedback">Completa este campo.</div>
 				
@@ -398,24 +411,142 @@
 		</div>
 		<div>
 			<label for="exampleFormControlTextarea1" class="form-text-style">Mensaje</label>
-			<textarea type="text" rows="5" cols="45" class="color-text input-style" id="MensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
+			<textarea type="text" rows="5" cols="45" class="color-text input-style" id="contactMensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
 			  <div class="valid-feedback">Valido.</div>
                 <div class="invalid-feedback">Completa este campo.</div>
 	
 		
 	 <!-- clave de prueba -->
-                        <!-- v2 recaptcha -->
+                        <!-- v2 recaptcha 
                         <div class="g-recaptcha" data-sitekey="6LewOgwhAAAAAG-dp_x8iuNyZmOcXKHP99hhv0cT"></div>
-                        <br />
+                        <br />-->
                         <div id="status"></div>
                         <div class="form-group">
-                            <button type="submit" class="send-button-style">Enviar</button>
+                             <!--<button type="submit" id="btnContactFormSubmitId" class="send-button-style">Enviar</button>-->
+							 <button type="submit" id="btnContactFormSubmitId" class="send-button-style">Enviar</button>
                         </div>
         </div>
-		</form>
-		
+		 </form> </div>
+		   <script>
+		$( document ).ready( function() 
+		{							
+			$( '#btnContactFormSubmitId' ).click( function()
+			{	
+				btnContactFormSubmitIdSubmit();
+			});	
+		});	
+		function btnContactFormSubmitIdSubmit()
+		{
+				// alert('1a1');
+				
+				//
+				// Clear Divs
+				$( '#divContactFormSuccess' ).html( "" );
+				$( '#divContactFormFail' ).html( "" );
+				
+				//
+				// Validate Form
+				if( $( '#contactEmail' ).val().length == 0 )
+				{
+					return;
+				}
+				if( $( '#contactName' ).val().length == 0 )
+				{
+					return;
+				}		
+				
+				
+				// alert('1b1');
+
+				
+				grecaptcha.ready( function() 
+				{
+					$( '#btnContactFormSubmitId' ).prop( 'disabled', true );
+
+					grecaptcha.execute
+					(
+						// cambiar clave de sitio web
+						'6LegspciAAAAACbZYtp1fln9QPm5Sst5dZk-mFOB',
+						{
+							action: 'contactValidateRecatcha'
+						}												
+					)
+					.then( function( token ) 
+					{
+						//
+						// Prepare Data For Ajax
+						var formData = new FormData();
+						formData.append( "token", token );
+						//formData.append( "token", "token" ); // error captcha invalido
+						formData.append( "action", "contactValidate" );
+						
+						formData.append( "language", "spanish" );
+						formData.append( "Name", $( '#contactName' ).val() );
+						formData.append( "Email", $( '#contactEmail' ).val() );
+						formData.append( "Phone", $( '#contactPhone' ).val() );
+						formData.append( "MensajeC", $( '#contactMensaje' ).val() );
+						//
+						// Call Ajax										
+						$.ajax
+						({
+							  url: "contactoarval.php"
+							  // url: "captchav3Validatex.php" // error page no existe
+							, type: "POST"
+							, contentType: false
+							, data: formData
+							, processData: false
+							, cache: false
+							, success: function( txtRequestSuccess )
+							{        	
+								//
+								// Reponse Success
+								//alert( "txtRequestSuccess="+txtRequestSuccess );
+
+								///*
+								var responseJson = $.parseJSON( txtRequestSuccess );
+								if( responseJson.responseSuccess )
+								{				
+									//
+									// Success
+									var messageSuccess = "<div class=\"alert alert-success\" role=\"alert\"><p><strong>" + responseJson.responseMessage + "</strong></p></div>'";
+									$( '#divContactFormSuccess' ).html( messageSuccess );
+								}
+								else
+								{
+									//
+									// Fail
+									var messageFail = "<div class=\"alert alert-danger\" role=\"alert\"><p><strong>" + responseJson.responseMessage + "</strong></p></div>"; 
+									$( '#divContactFormFail' ).html( messageFail );
+								}
+								//*/
+							}
+							, error: function( jqXHR, txtRequestError )
+							{        	
+								//
+								// Reponse Error													
+								var messageFail = "<div class=\"alert alert-danger\" role=\"alert\"><p><strong>" + "Error general" + "</strong></p></div>"; 
+								$( '#divContactFormFail' ).html( messageFail );
+							} 
+							, complete: function()
+							{
+       							$( '#btnContactFormSubmitId' ).prop( 'disabled', false );
+    						}
+						});				
+					})
+					.catch( function( e ) 
+					{
+						$( '#btnContactFormSubmitId' ).prop( 'disabled', false );									
+						//
+						// Reponse Error													
+						var messageFail = "<div class=\"alert alert-danger\" role=\"alert\"><p><strong>" + "Captcha exception" + "</strong></p></div>"; 
+						$( '#divContactFormFail' ).html( messageFail );
+					});					
+				});									
+		}						
+	</script>			
 		
 	</div>
+	
 	</div>
 	</div>
 </section>

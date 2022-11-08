@@ -21,7 +21,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/api.js"></script>
+
+		<!-- reCAPTCHAv3-->
+		<!--
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!-- cambiar clave de sitio web -->
+		<script src="https://www.google.com/recaptcha/api.js?render=6LegspciAAAAACbZYtp1fln9QPm5Sst5dZk-mFOB"></script>
+		<!-- reCAPTCHAv3-->	
 
 
 </head>
@@ -67,43 +74,169 @@
 		<div class="row" id="">
 		<div class="col-md-7">
             <div class="form-style">
-            <form id="ContactForm" action="demo.php" class=" mb-5" method="post" class="needs-validation">
+			
+			<!-- recaptchav3 -->
+			<div id="divDemoFormSuccess"></div>
+			<div id="divDemoFormFail"></div>
+			<!-- recaptchav3 -->
+			
+            <!--<form id="ContactForm" action="demo.php" class=" mb-5" method="post" class="needs-validation"> -->
+			<form id="DemoForm" action="return false;" class=" mb-5" method="post" class="needs-validation" onsubmit="return false;">
+			
                     <div>
                         <label for="exampleFormControlInput1" class="form-text-style">Email</label>
-                        <input type="email" class="input-style" name="Email" placeholder="name@example.com" id="Email" minlength="1" required />
+                        <input type="email" class="input-style" name="Email" placeholder="name@example.com" id="demoEmail" minlength="1" required />
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Completa este campo.</div>
                     </div>
                     <div class="header-flex">
                         <div class="form-input-style">
                             <label for="exampleFormControlTextarea1" class="form-text-style">Name</label>
-                            <input type="text" class="input-style2" name="Name" placeholder="Nombre" id="Name" minlength="1" required />
+                            <input type="text" class="input-style2" name="Name" placeholder="Nombre" id="demoName" minlength="1" required />
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Completa este campo.</div>
                         </div>
                         <div>
                             <label for="exampleFormControlTextarea1" class="form-text-style">Phone</label>
-                            <input type="phone-number" class="input-style2" placeholder="123456" name="Phone" id="Phone" />
+                            <input type="phone-number" class="input-style2" placeholder="123456" name="Phone" id="demoPhone" />
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Completa este campo.</div>
                         </div>
                     </div>
                     <div>
                         <label for="exampleFormControlTextarea1" class="form-text-style">When would you like to implement your solution?</label>
-                        <textarea type="text" rows="2" cols="45" class="color-text input-style" id="MensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
+                        <textarea type="text" rows="2" cols="45" class="color-text input-style" id="demoMensajeC"  name="MensajeC" placeholder="Mensaje">Mensaje</textarea>
                         <div class="valid-feedback">Valido.</div>
                         <div class="invalid-feedback">Completa este campo.</div>
                         
                         <!-- clave de prueba -->
                         <!-- v2 recaptcha -->
-                        <div class="g-recaptcha" data-sitekey="6LewOgwhAAAAAG-dp_x8iuNyZmOcXKHP99hhv0cT"></div>
+                        <!-- <div class="g-recaptcha" data-sitekey="6LewOgwhAAAAAG-dp_x8iuNyZmOcXKHP99hhv0cT"></div>-->
                         <br />
                         <div id="status"></div>
                         <div class="form-group">
-                            <button type="submit" class="send-button-style">Submit</button>
+                            <!--<button type="submit" class="send-button-style">Submit</button>-->
+							<button type="submit" id="btnDemoFormSubmitId" class="send-button-style">Submit</button>
                         </div>
 		            </div> 
                 </form>
+				<script>
+					$( document ).ready( function() 
+					{							
+						$( '#btnDemoFormSubmitId' ).click( function()
+						{	
+							btnDemoFormSubmitIdSubmit();
+						});	
+					});	
+					function btnDemoFormSubmitIdSubmit()
+					{
+							// alert('1a1');
+							
+							//
+							// Clear Divs
+							$( '#divDemoFormSuccess' ).html( "" );
+							$( '#divDemoFormFail' ).html( "" );
+							
+							//
+							// Validate Form
+							if( $( '#demoEmail' ).val().length == 0 )
+							{
+								return;
+							}
+							if( $( '#demoName' ).val().length == 0 )
+							{
+								return;
+							}		
+							
+							
+							// alert('1b1');
+
+							
+							grecaptcha.ready( function() 
+							{
+								$( '#btnDemoFormSubmitId' ).prop( 'disabled', true );
+								
+								grecaptcha.execute
+								(
+									// cambiar clave de sitio web
+									'6LegspciAAAAACbZYtp1fln9QPm5Sst5dZk-mFOB',
+									{
+										action: 'demoValidateRecatcha'
+									}												
+								)
+								.then( function( token ) 
+								{
+									//
+									// Prepare Data For Ajax
+									var formData = new FormData();
+									formData.append( "token", token );
+									//formData.append( "token", "token" ); // error captcha invalido
+									formData.append( "action", "demoValidate" );
+									
+									formData.append( "language", "english" );
+									formData.append( "Name", $( '#demoName' ).val() );
+									formData.append( "Email", $( '#demoEmail' ).val() );
+									formData.append( "Phone", $( '#demoPhone' ).val() );
+									formData.append( "MensajeC", $( '#demoMensajeC' ).val() );
+									//
+									// Call Ajax										
+									$.ajax
+									({
+										  url: "demo.php"
+										  // url: "captchav3Validatex.php" // error page no existe
+										, type: "POST"
+										, contentType: false
+										, data: formData
+										, processData: false
+										, cache: false
+										, success: function( txtRequestSuccess )
+										{        	
+											//
+											// Reponse Success
+											//alert( "txtRequestSuccess="+txtRequestSuccess );
+
+											///*
+											var responseJson = $.parseJSON( txtRequestSuccess );
+											if( responseJson.responseSuccess )
+											{				
+												//
+												// Success
+												var messageSuccess = "<div class=\"alert alert-success\" role=\"alert\"><p><strong>" + responseJson.responseMessage + "</strong></p></div>'";
+												$( '#divDemoFormSuccess' ).html( messageSuccess );
+											}
+											else
+											{
+												//
+												// Fail
+												var messageFail = "<div class=\"alert alert-danger\" role=\"alert\"><p><strong>" + responseJson.responseMessage + "</strong></p></div>"; 
+												$( '#divDemoFormFail' ).html( messageFail );
+											}
+											//*/
+										}
+										, error: function( jqXHR, txtRequestError )
+										{        	
+											//
+											// Reponse Error													
+											var messageFail = "<div class=\"alert alert-danger\" role=\"alert\"><p><strong>" + "Error general" + "</strong></p></div>"; 
+											$( '#divDemoFormFail' ).html( messageFail );
+										}
+										, complete: function()
+										{
+       										$( '#btnDemoFormSubmitId' ).prop( 'disabled', false );
+										}
+									});				
+								})
+								.catch( function( e ) 
+								{
+									$( '#btnDemoFormSubmitId' ).prop( 'disabled', false );												
+									//
+									// Reponse Error													
+									var messageFail = "<div class=\"alert alert-danger\" role=\"alert\"><p><strong>" + "Captcha exception" + "</strong></p></div>"; 
+									$( '#divDemoFormFail' ).html( messageFail );
+								});									
+							});									
+					}						
+				</script>				
 			</div>
         </div>
 		<div class="col-md-5"  id="Form-text">

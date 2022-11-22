@@ -104,14 +104,23 @@ margin-left: 25px;
 	font-family: 'Amiko', sans-serif;	
 	font-size: 24px;
 	color:#305C8F;
-	margin-left: 115px;
 }
+.margin-title{
+	margin-left: 115px;
+	
+}
+.titleR{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 24px;
+	color:#FFFFFF;
+	margin-left: 30px;
+}
+
 .titleB{
 	font-family: 'Amiko', sans-serif;	
 	font-size: 42px;
 	color:#003A5B;
 	font-weight: bold;
-	margin-left: 115px;
 	
 }
 .titleC{
@@ -325,9 +334,17 @@ margin-left: 25px;
 
 .form-style{
 	background-color: #6885A6;
+	border-radius: 20px;
+	margin: 60px 60px 120px 130px;
+	width: 570px;
+}
+
+.form-schedule{
+	background-color: #6885A6;
 	padding: 60px;
 	border-radius: 20px;
 	margin: 60px 60px 120px 130px;
+	width: 1000px;
 }
 
 .input-style{
@@ -469,20 +486,7 @@ float: center;
 	flex-direction: column;
 	margin-left: 25px;
 }
-.title{
-	font-family: 'Amiko', sans-serif;	
-	font-size: 24px;
-	color:#305C8F;
-	margin-left: 35px;
-}
-.titleB{
-	font-family: 'Amiko', sans-serif;	
-	font-size: 42px;
-	color:#003A5B;
-	font-weight: bold;
-	margin-left: 35px;
-	
-}
+
 .titleC{
 	font-family: 'Amiko', sans-serif;	
 	font-size: 24px;
@@ -498,6 +502,14 @@ float: center;
 	font-weight: bold;
 	line-height: 1.5;
 	margin-left: 15px;
+}
+.regular-title{
+	font-family: 'Amiko', sans-serif;	
+	font-size: 18px;
+	color:#6885A6;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-left: 115px;
 }
 .PTB{
 	margin: 0px 20px 0px;
@@ -673,20 +685,7 @@ margin-left: 60px;
 	flex-direction: column;
 	margin-left: 10px;
 }
-.title{
-	font-family: 'Amiko', sans-serif;	
-	font-size: 22px;
-	color:#305C8F;
-	margin-left: 35px;
-}
-.titleB{
-	font-family: 'Amiko', sans-serif;	
-	font-size: 28px;
-	color:#003A5B;
-	font-weight: bold;
-	margin-left: 35px;
-	
-}
+
 .titleC{
 	font-family: 'Amiko', sans-serif;	
 	font-size: 18px;
@@ -694,6 +693,10 @@ margin-left: 60px;
 	font-weight: bold;
 	margin-left: 35px;
 	line-height: 1.5;
+}
+
+.margin-title{
+	margin-left: 35px;
 }
 .titleF{
 	font-family: 'Amiko', sans-serif;	
@@ -1018,9 +1021,13 @@ margin-right: 15px;
 	font-size: 24px;
 	color:#6885A6;
 	font-weight: bold;
-	margin-left: 5px;
+	margin-left: 20px;
 	line-height: 1.5;
 }
+.margin-title{
+	margin-left: 20px;
+}
+
 .direct{
 	display: flex;
 	flex-direction: row;
